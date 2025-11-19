@@ -4,8 +4,8 @@ package articulos;
 public class Libro extends Articulo {
     private String autor;
     private int numPaginas;
-    public enum genero {MISTERIO, TERROR, ACCION, HISTORIA, FANTASIA};
-    private genero genero;
+    public enum Genero {MISTERIO, TERROR, ACCION, HISTORIA, FANTASIA};
+    private Genero genero;
 
     public Libro(String titulo, int anyoLanzamiento, double precioPorDia, int numPaginas, String autor) {
         super(titulo, anyoLanzamiento, precioPorDia);
@@ -16,7 +16,7 @@ public class Libro extends Articulo {
     public Libro() {
     }
 //seteamos el numero de paginas en num.Paginas con este constructor
-    public Libro(String titulo, int anyoLanzamiento, double precioPorDia, genero genero) {
+    public Libro(String titulo, int anyoLanzamiento, double precioPorDia, Genero genero) {
         super(titulo, anyoLanzamiento, precioPorDia);
         this.genero = genero;
         this.numPaginas = 100;
@@ -38,11 +38,11 @@ public class Libro extends Articulo {
         this.numPaginas = numPaginas;
     }
 
-    public genero getGenero() {
+    public Genero getGenero() {
         return genero;
     }
 
-    public void setGenero(genero genero) {
+    public void ñsetGenero(Genero genero) {
         this.genero = genero;
     }
     //booleano para que me diga que true si tiene 200 paginas o mas. false si tiene menos.

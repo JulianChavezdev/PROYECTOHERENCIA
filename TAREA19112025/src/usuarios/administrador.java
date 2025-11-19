@@ -3,10 +3,10 @@ package usuarios;
 import articulos.Articulo;
 // atributos de la clase
 public class Administrador extends Usuario {
-    public enum rol {JEFE, VENDEDOR};
-    private rol rol;
+    public enum Rol {JEFE, VENDEDOR};
+    private Rol rol;
 
-    public Administrador(String nombreUsuario, String contrasenya, int id, int anyoNacimiento, rol rol) {
+    public Administrador(String nombreUsuario, String contrasenya, int id, int anyoNacimiento, Rol rol) {
         super(nombreUsuario, contrasenya, id, anyoNacimiento);
         this.rol = rol;
     }
@@ -14,11 +14,11 @@ public class Administrador extends Usuario {
     public Administrador() {
     }
 
-    public rol getRol() {
+    public Rol getRol() {
         return rol;
     }
 
-    public void setRol(rol rol) {
+    public void setRol(Rol rol) {
         this.rol = rol;
     }
 
